@@ -35,13 +35,11 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: var(--color-text);
   font-family: sans-serif;
   font-family: var(--font-sans);
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
-  background-color: var(--color-primary);
 }
 a {
   background-color: transparent;
@@ -73,11 +71,9 @@ dfn {
 }
 h1 {
   margin: 0;
-  margin-bottom: 2rem;
   padding: 0;
   line-height: var(--line-height-dense);
   letter-spacing: -0.01em;
-  font-size: 26px;
 }
 h1 > b {
   color: var(--color-primary);
@@ -179,10 +175,7 @@ p *:last-child {
 li > p {
   margin-bottom: calc(var(--space-4) / 2);
 }
-p {
-  max-width: 680px;
-  font-weight: 500;
-}
+
 code {
   font-size: 0.875rem;
 }
@@ -225,52 +218,4 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: none;
-}
-button {
-  padding: 18px;
-  font-size: 16px;
-  border-radius: 15px;
-  text-decoration: none;
-  border: none;
-  background-color:#e3002f;
-  color: #d9dadb;
-}
-
-
-@media (min-width: 768px) {
-  h1 {
-    width: 661px;
-    font-size: 36px;
-  }
-  p{
-    font-size: 24px;
-  }
-  button{
-    padding: 21px;
-    font-size: 20px;
-    border-radius: 15px;
-    border-radius: 25px;
-  }
-  img{
-    height: 168px;
-  }
-}
-
-@media only screen and (max-width: 770px) {
-  h1{
-    margin-top: 1em;
-    text-align: center;
-  }
-  p{
-    text-align: center;
-  }
-
-  img{
-    display: block;
-    margin: 0 auto;
-  }
-  button{
-    display: block;
-    margin: 0 auto;
-  }
 }

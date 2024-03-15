@@ -6,7 +6,6 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       margin: `0 auto`,
-      padding: `var(--space-4) var(--size-gutter)`,
       justifyContent: `space-evenly`,
       backgroundColor: `var(--color-primary)`,
     }}

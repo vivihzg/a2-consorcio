@@ -27,6 +27,30 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
+          //background 1
+          position: 'fixed',
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          backgroundColor: '#024f5f',
+          zIndex: -2,
+        }}
+      />
+      <div
+        style={{
+          //background 2
+          position: 'fixed',
+          bottom: 0,
+          left: 0,
+          width: '100%',
+          height: '298px',
+          backgroundColor: '#d9dadb',
+          zIndex: -1,
+      }}
+      />
+      <div
+        style={{
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
           padding: `var(--size-gutter)`,
@@ -39,6 +63,7 @@ const Layout = ({ children }) => {
             fontSize: `var(--font-sm)`,
           }}
         >
+          {/* Conteúdo do footer aqui */}
         </footer>
       </div>
     </>

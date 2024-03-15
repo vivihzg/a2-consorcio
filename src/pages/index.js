@@ -1,97 +1,138 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import imagemLogo from "../images/a2-logo-curvas.png"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
-// const links = [
-//   {
-//     text: "Tutorial",
-//     url: "https://www.gatsbyjs.com/docs/tutorial",
-//     description:
-//       "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-//   },
-//   {
-//     text: "Examples",
-//     url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-//     description:
-//       "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-//   },
-//   {
-//     text: "Plugin Library",
-//     url: "https://www.gatsbyjs.com/plugins",
-//     description:
-//       "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-//   },
-//   {
-//     text: "Build and Host",
-//     url: "https://www.gatsbyjs.com/cloud",
-//     description:
-//       "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-//   },
-// ]
+const Slide = () => {
+  const settings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3, // número de slides visíveis
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000, // velocidade do autoplay em milissegundos
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
 
-// const samplePageLinks = [
-//   {
-//     text: "Page 2",
-//     url: "page-2",
-//     badge: false,
-//     description:
-//       "A simple example of linking to another page within a Gatsby site",
-//   },
-//   { text: "TypeScript", url: "using-typescript" },
-//   { text: "Server Side Rendering", url: "using-ssr" },
-//   { text: "Deferred Static Generation", url: "using-dsg" },
-// ]
+  return (
+    <div className={styles.sliderWrapper}>
+      <Slider {...settings}>
+        <div className={styles.slideItem}>
+          <a href="https://www.embracon.com.br/" target="_blank" rel="noreferrer">
+            <StaticImage
+              alt="Embracon"
+              src="../images/embracon-logo4.png"
+            />
+          </a>
+        </div>
+        <div className={styles.slideItem}>
+          <a href="https://www.caixa.gov.br/voce/consorcios/Paginas/default.aspx" target="_blank" rel="noreferrer">
+            <StaticImage
+              alt="Caixa"
+              src="../images/caixa-logo.png"
+            />
+          </a>
+        </div>
+        <div className={styles.slideItem}>
+          <a href="https://www.consorcioaraucaria.com.br/" target="_blank" rel="noreferrer">
+            <StaticImage
+              alt="Araucária"
+              src="../images/logo_araucaria.png"
+            />
+          </a>
+        </div>
+        <div className={styles.slideItem}>
+          <a href="https://www.consorciocanopus.com.br/" target="_blank" rel="noreferrer">
+            <StaticImage
+              alt="Canopus"
+              src="../images/canopus.png"
+            />
+          </a>
+        </div>
+        <div className={styles.slideItem}>
+          <a href="https://www.consorcioservopa.com.br/" target="_blank" rel="noreferrer">
+            <StaticImage
+              alt="Consórcio Produto"
+              src="../images/logo_consorcioservopa.jpg"
+            />
+          </a>
+        </div>
+      </Slider>
+    </div>
+  );
+};
 
-// const moreLinks = [
-//   { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-//   {
-//     text: "Documentation",
-//     url: "https://gatsbyjs.com/docs/",
-//   },
-//   {
-//     text: "Starters",
-//     url: "https://gatsbyjs.com/starters/",
-//   },
-//   {
-//     text: "Showcase",
-//     url: "https://gatsbyjs.com/showcase/",
-//   },
-//   {
-//     text: "Contributing",
-//     url: "https://www.gatsbyjs.com/contributing/",
-//   },
-//   { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-// ]
+const ParceirosSection = () => (
+  <main>
+    <div className={styles.parceiro}>
+      <h2>Parceiros</h2>
+      <Slide />
+    </div>
+  </main>
+)
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textLeft}>
-    <img
-      alt="a2 consorcio logo"
-      height={105}
-      src={imagemLogo}
-    />
+    <div className={styles.principal}>
+      <img
+        alt="a2 consorcio logo"
+        height={105}
+        src={imagemLogo}
+      />
       <h1>
-      Sua solução completa em consórcios. Negociação, avaliação, assessoramento e compra e venda, tudo em um só lugar.
+        Sua solução completa em consórcios.
       </h1>
+      <h2>
+        Somos especializados em contemplação e venda estruturada, buscando soluções completas para nossos clientes.
+      </h2>
       <p>
-      Construa seu futuro com A2 Consórcio: Tudo o que você sonha, ao seu alcance.
+        Construa seu futuro com A2 Consórcios: Tudo o que você sonha, ao seu alcance.
       </p>
 
-      <button className={styles.button}>
-        <Link to="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE">
+      <button className={styles.buttonPrincipal}>
+        <Link to="https://api.whatsapp.com/send?phone=554522210322">
           Simule seu consórcio pelo WhatsApp
         </Link>
-        </button>
+      </button>
     </div>
-
+    <ParceirosSection/>
   </Layout>
 )
 
@@ -101,5 +142,4 @@ const IndexPage = () => (
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
 export const Head = () => <Seo title="Simule seu consórcio" />
-
 export default IndexPage
