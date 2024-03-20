@@ -76,7 +76,7 @@
   border-radius: 15px;
   text-decoration: none;
   border: none;
-  background-color:#e3002f;
+  background-color:#21c25c;
   color: #d9dadb;
 }
 .parceiro h2 {
@@ -147,6 +147,10 @@
     font-size: 17px;
     padding: 17px;
   }
+  .parceiro h2 {
+    font-size: 29px;
+    margin-bottom: 35px;
+  }
 }
 
 @media only screen and (max-width: 632px) {
@@ -169,5 +173,69 @@
   }
   .principal button{
     display: block;
+  }
+}
+
+@media only screen and (max-width: 496px) {
+  .principal h1{
+    font-size: 23px;
+  }
+  .principal h2{
+    font-size: 19px;
+  }
+  .principal p{
+    font-size: 16px;
+  }
+  .principal button{
+    font-size: 15px;
+    padding: 15px;
+  }
+  .principal button a{
+    font-weight: 700;
+  }
+  .parceiro h2 {
+    font-size: 26px;
+    margin-top: 115px;
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 383px) {
+  .principal h1{
+    font-size: 23px;
+  }
+  .principal h2{
+    font-size: 17px;
+  }
+  .principal p{
+    font-size: 14px;
+  }
+  .principal button{
+    font-size: 15px;
+    padding: 13px;
+  }
+  .parceiro h2 {
+    font-size: 28px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 338px) {
+  .principal h1{
+    font-size: 20px;
+  }
+  .principal h2{
+    font-size: 15px;
+  }
+  .principal p{
+    font-size: 13px;
+  }
+  .principal button{
+    font-size: 13px;
+    padding: 11px;
+  }
+  .parceiro h2 {
+    font-size: 24px;
+    margin-top: 125px;
+    margin-bottom: 15px;
   }
 }
