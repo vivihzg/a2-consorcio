@@ -39,5 +39,13 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+        options: {
+          google: {
+            families: [`Montserrat:100,200,300,400,500,600,700,800`, `sans-serif`]
+          }
+        }
+    },
   ],
 }

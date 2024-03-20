@@ -4,7 +4,7 @@
   --color-primary: #024f5f;
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
-  --font-sans: Montserrat;
+  --font-sans: Montserrat, sans-serif;
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   --font-lg: 18px;
