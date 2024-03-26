@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
           zIndex: -2,
         }}
       />
-      <div
+      <div className="background-2"
         style={{
           //background 2
           position: 'fixed',
