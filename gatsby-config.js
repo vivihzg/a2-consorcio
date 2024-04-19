@@ -15,6 +15,20 @@ module.exports = {
     siteUrl: `https://a2consorcios.com.br/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "G-9QCD0ER9NB", // Google Analytics / GA
+        ],
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -46,14 +60,6 @@ module.exports = {
             families: [`Montserrat:100,200,300,400,500,600,700,800`, `sans-serif`]
           }
         }
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "G-9QCD0ER9NB",
-        head: true,
-        anonymize: true,
-      },
     },
   ],
 }
