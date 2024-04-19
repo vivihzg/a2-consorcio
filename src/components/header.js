@@ -1,6 +1,4 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import novaImagem from "../images/a2-logo-curvas.png"
 
 const Header = ({ siteTitle }) => (
   <header

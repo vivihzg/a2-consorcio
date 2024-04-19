@@ -106,7 +106,6 @@ const ParceirosSection = () => (
   </main>
 )
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
   <Layout>
